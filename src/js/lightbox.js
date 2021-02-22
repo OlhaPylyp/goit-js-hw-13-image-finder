@@ -19,7 +19,6 @@ import 'basicLightbox/src/styles/main.scss';
 	`).show();
     }
 }
-
     
 export default  
  lightBox 

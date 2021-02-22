@@ -20,24 +20,23 @@ listGallery.innerHTML = '';
         lightBox();
 }
  
-function fetchImage() {
-
+function  fetchImage() {
     //loadBtn.disabled = true;
 //loadBtn.classList.add('is-hidden');
-     //spinner.classList.add('is-hidden')
- 
-    api.apiService().then((image) => {
-        gallery(image)
-           infinityScroll();
-        console.log('listGallery',listGallery)
+     //spinner.classList.add('is-hidden')   
+         api.apiService().then((image) => {
+             gallery(image)
+             infinityScroll();
+             console.log('listGallery', listGallery)
      
-//loadBtn.classList.remove('is-hidden')
+             //loadBtn.classList.remove('is-hidden')
 
-        // window.scrollTo({
-        //     top: 100,
-        // behavior:'smooth'});
-    })
+                //   window.scrollTo({
+                //      top: 1000,
+                // behavior:'smooth'});
+         })
+     }
     
-}
+
 
 export default fetchImage;
