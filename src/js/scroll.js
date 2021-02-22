@@ -1,10 +1,11 @@
 
 import { listGallery } from './refs'
-console.log('listGallery', listGallery)
 import fetchImage from './searchImage';
 
 export default function infinityScroll() {
-    let options = {       
+  console.log("infinityScroll");
+
+  let options = {       
      rootMargin: '5px',
      root: null,
       threshold: 1
@@ -13,12 +14,11 @@ export default function infinityScroll() {
       entries.forEach(entry => {
           console.log('obs', observer)
             if (entry.isIntersecting) {              
-              observer.unobserve(entry.target); 
-             fetchImage() 
-                     }       
+              observer.unobserve(entry.target);            
+                fetchImage();             
+            }       
         }) 
     };
-  const observer = new IntersectionObserver(obs, options);
-   console.log("last", listGallery.lastElementChild)
+    const observer = new IntersectionObserver(obs, options);
     observer.observe(listGallery.lastElementChild);
 }
