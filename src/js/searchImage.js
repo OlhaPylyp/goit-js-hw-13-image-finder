@@ -1,5 +1,5 @@
 
-import { searchForm, listGallery,  loadBtn,spinner} from './refs'
+import { searchForm, listGallery, loadBtn} from './refs'
 import lightBox from './lightbox'
 import api from './apiService'
 import gallery from "../js/updateGallery"
@@ -31,9 +31,9 @@ function  fetchImage() {
      
              //loadBtn.classList.remove('is-hidden')
 
-                //   window.scrollTo({
-                //      top: 1000,
-                // behavior:'smooth'});
+                  window.scrollTo({
+                     top: 100,
+                behavior:'smooth'});
          })
      }
     
