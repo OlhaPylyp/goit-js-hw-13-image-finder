@@ -22,7 +22,7 @@ function searchFounder(event) {
             fetchImage();
             lightBox();
 }
- let skip_first = false;
+ let scrollScr = false;
 function fetchImage() {
     
     //loadBtn.disabled = true;
@@ -33,17 +33,17 @@ function fetchImage() {
              gallery(image);            
            
              if (listGallery.childNodes.length > 0) {
-                 if (skip_first !== false) {
+                 if (scrollScr) {
                      window.scrollTo(                 
                          {
-                             top: document.documentElement.scrollTop + document.documentElement.clientHeight-10,
+                             top: document.documentElement.scrollTop + document.documentElement.clientHeight,
                              behavior: 'smooth'
                             }
                             );
                         }
                     }                  
-                    skip_first = true;
-                    infinityScroll();
+               scrollScr = true;
+               infinityScroll();
          })
      }
     
