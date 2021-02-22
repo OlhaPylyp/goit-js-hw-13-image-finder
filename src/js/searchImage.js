@@ -3,7 +3,7 @@ import { searchForm, listGallery, loadBtn} from './refs'
 import lightBox from './lightbox'
 import api from './apiService'
 import gallery from "../js/updateGallery"
-import '../styles.scss';
+import '../scss/styles.scss';
 import infinityScroll from './scroll'
 
 searchForm.addEventListener('submit',  searchFounder)
@@ -30,10 +30,17 @@ function  fetchImage() {
              console.log('listGallery', listGallery)
      
              //loadBtn.classList.remove('is-hidden')
-
-                  window.scrollTo({
-                     top: 100,
-                behavior:'smooth'});
+             console.log("scroll", document.documentElement.scrollHeight)
+             console.log("client", document.documentElement.clientHeight) 
+             console.log("top", document.documentElement.scrollTop)  
+             
+             window.scrollTo(
+                 
+                 {
+               top: document.documentElement.scrollTop + document.documentElement.clientHeight ,
+                      behavior: 'smooth'
+                 }
+             );
          })
      }
     

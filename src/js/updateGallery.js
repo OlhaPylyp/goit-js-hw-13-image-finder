@@ -1,4 +1,4 @@
-import '../styles.scss';
+'../scss/styles.scss';
 import { listGallery } from './refs'
 import imageTpl from '../templates/imageGrid.hbs';
 function updateGallery(hits) { 
