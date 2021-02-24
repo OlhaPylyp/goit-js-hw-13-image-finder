@@ -14,7 +14,7 @@ searchForm.addEventListener('submit',  searchFounder)
     
 loadBtn.addEventListener('click', fetchImage);
 function searchFounder(event) {
-        scrollScr = false;
+    scrollScr = false;
     event.preventDefault();
     const form = event.currentTarget;
     api.query = form.elements.query.value;
@@ -33,9 +33,9 @@ function searchFounder(event) {
     api.resetPage();    
     fetchImage();
      form.reset();
-    listGallery.innerHTML = '';
-    lightBox();
+
 }
+    lightBox();
  let scrollScr = false;
 function fetchImage() {
     
